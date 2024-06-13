@@ -14,10 +14,34 @@ class CategoryFactory extends Factory
      *
      * @return array<string, mixed>
      */
+    private $postCategories = [
+        "Technology",
+        "Health",
+        "Lifestyle",
+        "Finance",
+        "Travel",
+        "Food",
+        "Education",
+        "Entertainment",
+        "Sports",
+        "Science",
+        "Business",
+        "Art",
+        "Culture",
+        "Politics",
+        "Environment",
+        "Fashion",
+        "DIY",
+        "Parenting",
+        "Relationships",
+        "Gaming"
+      ];
+
     public function definition(): array
     {
+        $name = fake()->randomElement($this->postCategories);
         return [
-            "name" =>fake()->title()
+            "name" =>$name
         ];
     }
 }

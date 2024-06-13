@@ -9,6 +9,7 @@
                             {{$err}}
                         @endforeach
                     @endif --}}
+                
                     <form action="{{route('categories.store')}}" method="post" class="p-3" >
                         @csrf
                         <input type="text" value="{{old('name')}}" class="block w-full p-2 rounded-md border-spacing-1 mb-2" placeholder="Type Category Name" name="name">
